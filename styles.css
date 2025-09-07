@@ -201,6 +201,31 @@ body {
     margin-bottom: 2rem;
 }
 
+.gallery-back-btn {
+    background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+    color: #fff !important;
+    border: 2px solid #d4af37;
+    padding: 12px 24px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.gallery-back-btn:hover {
+    background: linear-gradient(135deg, #b8941f 0%, #d4af37 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.gallery-back-btn i {
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-back-btn:hover i {
+    transform: translateX(-3px);
+}
+
 /* Image Slider */
 .image-slider {
     padding: 80px 0;
@@ -371,6 +396,130 @@ body {
     
     .slider-thumbnails {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Gallery Call to Action */
+.gallery-cta {
+    background: linear-gradient(135deg, #f8f6f0 0%, #fefefe 100%);
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23d4af37" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23d4af37" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="%23d4af37" opacity="0.05"/><circle cx="10" cy="60" r="0.5" fill="%23d4af37" opacity="0.05"/><circle cx="90" cy="40" r="0.5" fill="%23d4af37" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #2c2c2c;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.cta-content p {
+    font-size: 1.1rem;
+    color: #6a6a6a;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    min-width: 200px;
+    justify-content: center;
+}
+
+.cta-buttons .btn-primary {
+    background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+    color: #fff;
+    border: 2px solid #d4af37;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.cta-buttons .btn-primary:hover {
+    background: linear-gradient(135deg, #b8941f 0%, #d4af37 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.cta-buttons .btn-outline {
+    background: transparent;
+    color: #d4af37;
+    border: 2px solid #d4af37;
+}
+
+.cta-buttons .btn-outline:hover {
+    background: #d4af37;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+}
+
+.cta-buttons .btn i {
+    font-size: 1.1rem;
+}
+
+/* Mobile Responsive for CTA */
+@media (max-width: 768px) {
+    .gallery-cta {
+        padding: 60px 0;
+    }
+    
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-buttons .btn {
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 375px) {
+    .cta-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .cta-buttons .btn {
+        min-width: 220px;
+        padding: 12px 24px;
     }
 }
     
