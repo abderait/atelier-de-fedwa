@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gâteaux - L'Atelier de Fedwa</title>
+    <link rel="stylesheet" href="styles.css?v=1.2.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>L'Atelier de Fedwa</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="index.html#apropos" class="nav-link">À propos</a></li>
+                <li><a href="index.html#galerie" class="nav-link">Galerie</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Header -->
+    <section class="gallery-header">
+        <div class="container">
+            <div class="gallery-header-content">
+                <h1>Gâteaux</h1>
+                <p>Créations sur mesure pour toutes occasions</p>
+                <a href="index.html#galerie" class="btn btn-outline gallery-back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Retour à la galerie
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Slider -->
+    <section class="image-slider">
+        <div class="container">
+            <div class="slider-container">
+                <div class="slider-main">
+                    <img id="main-image" src="https://images.unsplash.com/photo-1579255139426-84ab54106ce4?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gâteau blanc à la crème">
+                    <div class="slider-controls">
+                        <button class="slider-btn prev-btn" onclick="previousImage()">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-btn next-btn" onclick="nextImage()">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="slider-counter">
+                        <span id="current-image">1</span> / <span id="total-images">12</span>
+                    </div>
+                </div>
+                
+                <div class="slider-thumbnails">
+                    <div class="thumbnail active" onclick="showImage(0)">
+                        <img src="https://images.unsplash.com/photo-1579255139426-84ab54106ce4?q=80&w=200&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gâteau blanc à la crème">
+                        <div class="thumbnail-overlay">
+                            <h4>Gâteau à la fraise</h4>
+                        </div>
+                    </div>
+                    <div class="thumbnail" onclick="showImage(1)">
+                        <img src="https://images.unsplash.com/photo-1579255139426-84ab54106ce4?q=80&w=200&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gâteau au chocolat">
+                        <div class="thumbnail-overlay">
+                            <h4>Gâteau au chocolat</h4>
+                        </div>
+                    </div>
+                    <div class="thumbnail" onclick="showImage(2)">
+                        <img src="https://images.unsplash.com/photo-1579255139426-84ab54106ce4?q=80&w=200&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cheesecake aux fruits">
+                        <div class="thumbnail-overlay">
+                            <h4>Cheesecake aux fruits</h4>
+                        </div>
+                    </div>
+                    <div class="thumbnail" onclick="showImage(3)">
+                        <img src="https://images.unsplash.com/photo-1579255139426-84ab54106ce4?q=80&w=200&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gâteau de mariage">
+                        <div class="thumbnail-overlay">
+                            <h4>Gâteau de mariage</h4>
+                        </div>
+                    </div>
+                    <div class="thumbnail" onclick="showImage(4)">
+                        <img src="https://images.unsplash.com/photo-1579255139426-84ab54106ce4?q=80&w=200&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gâteau aux fruits">
+                        <div class="thumbnail-overlay">
+                            <h4>Gâteau aux fruits</h4>
+                        </div>
+                    </div>
+                    <div class="thumbnail" onclick="showImage(5)">
+                        <img src="https://images.unsplash.com/photo-1579255139426-84ab54106ce4?q=80&w=200&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gâteau à la vanille">
+                        <div class="thumbnail-overlay">
+                            <h4>Gâteau à la vanille</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="gallery-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Vous aimez nos créations ?</h2>
+                <p>Contactez-nous pour un devis personnalisé et réalisez vos rêves gourmands</p>
+                <div class="cta-buttons">
+                    <a href="index.html#contact" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i>
+                        Demander un devis
+                    </a>
+                    <a href="tel:+33123456789" class="btn btn-outline">
+                        <i class="fas fa-phone"></i>
+                        Nous appeler
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>L'Atelier de Fedwa</h3>
+                    <p>Pâtisseries artisanales faites avec amour</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html#accueil">Accueil</a>
+                    <a href="index.html#apropos">À propos</a>
+                    <a href="index.html#galerie">Galerie</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 L'Atelier de Fedwa. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js?v=1.2.0"></script>
+    <script>
+        // Images data
+        const images = [
+            {
+                src: "https://images.unsplash.com/photo-1579255139426-84ab54106ce4?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                title: "Gâteau à la fraise",
+                description: "Crème chantilly et fraises fraîches"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1579255139426-84ab54106ce4?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                title: "Gâteau au chocolat",
+                description: "Ganache et crème au beurre"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1579255139426-84ab54106ce4?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                title: "Cheesecake aux fruits",
+                description: "Fromage frais et coulis de fruits"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1579255139426-84ab54106ce4?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                title: "Gâteau de mariage",
+                description: "Crème pâtissière et décorations élégantes"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1579255139426-84ab54106ce4?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                title: "Gâteau aux fruits",
+                description: "Fruits de saison et crème légère"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1579255139426-84ab54106ce4?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                title: "Gâteau à la vanille",
+                description: "Crème vanille et décorations délicates"
+            }
+        ];
+
+        let currentImageIndex = 0;
+
+        function showImage(index) {
+            currentImageIndex = index;
+            const mainImage = document.getElementById('main-image');
+            const currentImageSpan = document.getElementById('current-image');
+            
+            mainImage.src = images[index].src;
+            mainImage.alt = images[index].title;
+            currentImageSpan.textContent = index + 1;
+            
+            // Update active thumbnail
+            document.querySelectorAll('.thumbnail').forEach((thumb, i) => {
+                thumb.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextImage() {
+            const nextIndex = (currentImageIndex + 1) % images.length;
+            showImage(nextIndex);
+        }
+
+        function previousImage() {
+            const prevIndex = (currentImageIndex - 1 + images.length) % images.length;
+            showImage(prevIndex);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') {
+                previousImage();
+            } else if (e.key === 'ArrowRight') {
+                nextImage();
+            }
+        });
+
+        // Auto-play (optional)
+        // setInterval(nextImage, 5000);
+    </script>
+</body>
+</html>
