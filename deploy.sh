@@ -9,7 +9,7 @@ echo "🚀 Déploiement du site L'Atelier de Fedwa..."
 
 # Variables
 REPO_URL="https://github.com/abderait/atelier-de-fedwa.git"
-DEPLOY_DIR="/var/www/html/dev"
+DEPLOY_DIR="/var/www/dev"
 NGINX_CONF="/etc/nginx/sites-available/dev.consultantdigital-paris.fr"
 NGINX_ENABLED="/etc/nginx/sites-enabled/dev.consultantdigital-paris.fr"
 
@@ -37,10 +37,9 @@ sudo chmod -R 755 $DEPLOY_DIR
 
 echo -e "${YELLOW}🔐 Création du fichier .htpasswd...${NC}"
 if [ ! -f "$DEPLOY_DIR/.htpasswd" ]; then
-    echo "Création du fichier .htpasswd..."
-    echo "Veuillez exécuter: sudo htpasswd -c $DEPLOY_DIR/.htpasswd admin"
-    echo "Puis relancer le script de déploiement."
-    exit 1
+    echo "Création du fichier .htpasswd avec le mot de passe admin$..."
+    echo "admin:\$apr1\$r1/7K8OG\$m6z3bVwsw7yrJxKp5X6fH0" > $DEPLOY_DIR/.htpasswd
+    echo "Fichier .htpasswd créé avec succès !"
 fi
 
 echo -e "${YELLOW}⚙️ Configuration Nginx...${NC}"

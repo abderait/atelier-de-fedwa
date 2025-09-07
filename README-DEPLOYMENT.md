@@ -10,15 +10,16 @@
 
 ### 1. Télécharger les fichiers
 ```bash
-cd /var/www/html
+cd /var/www
 git clone https://github.com/abderait/atelier-de-fedwa.git dev
 cd dev
 ```
 
 ### 2. Créer le fichier de mot de passe
 ```bash
-sudo htpasswd -c /var/www/html/dev/.htpasswd admin
-# Entrez le mot de passe souhaité
+# Le mot de passe est déjà configuré : admin$
+# Utilisateur : admin
+# Mot de passe : admin$
 ```
 
 ### 3. Configurer Nginx
@@ -37,17 +38,18 @@ sudo systemctl reload nginx
 ## 🔐 Sécurité
 
 ### Protection par mot de passe
-- Fichier : `/var/www/html/dev/.htpasswd`
+- Fichier : `/var/www/dev/.htpasswd`
 - Utilisateur par défaut : `admin`
-- Pour ajouter un utilisateur : `sudo htpasswd /var/www/html/dev/.htpasswd nouvel_utilisateur`
+- Mot de passe : `admin$`
+- Pour ajouter un utilisateur : `sudo htpasswd /var/www/dev/.htpasswd nouvel_utilisateur`
 
 ### Robots.txt
 - Bloque complètement l'indexation
-- Fichier : `/var/www/html/dev/robots.txt`
+- Fichier : `/var/www/dev/robots.txt`
 
 ## 📁 Structure des fichiers
 ```
-/var/www/html/dev/
+/var/www/dev/
 ├── index.html
 ├── styles.css
 ├── script.js
@@ -60,7 +62,7 @@ sudo systemctl reload nginx
 
 ## 🔄 Mise à jour
 ```bash
-cd /var/www/html/dev
+cd /var/www/dev
 git pull origin main
 sudo systemctl reload nginx
 ```

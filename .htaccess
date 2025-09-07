@@ -1,7 +1,7 @@
 # Protection par mot de passe pour le site de développement
 AuthType Basic
 AuthName "Site en développement - Accès restreint"
-AuthUserFile /var/www/html/dev/.htpasswd
+AuthUserFile /var/www/dev/.htpasswd
 Require valid-user
 
 # Optimisations de performance
