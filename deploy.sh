@@ -10,7 +10,7 @@ echo "🚀 Déploiement du site L'Atelier de Fedwa..."
 # Variables
 REPO_URL="https://github.com/abderait/atelier-de-fedwa.git"
 DEPLOY_DIR="/var/www/dev"
-NGINX_CONF="/etc/nginx/conf.d/dev.consultantdigital-paris.fr.conf"
+NGINX_CONF="/etc/nginx/conf.d/dev.ayta.fr.conf"
 
 # Couleurs pour les logs
 RED='\033[0;31m'
@@ -58,6 +58,6 @@ else
 fi
 
 echo -e "${GREEN}🎉 Déploiement terminé avec succès !${NC}"
-echo -e "${YELLOW}🌐 Site accessible sur: http://dev.consultantdigital-paris.fr${NC}"
+echo -e "${YELLOW}🌐 Site accessible sur: http://dev.ayta.fr${NC}"
 echo -e "${YELLOW}🔐 Protection par mot de passe activée${NC}"
 echo -e "${YELLOW}🤖 Robots.txt configuré pour bloquer l'indexation${NC}"

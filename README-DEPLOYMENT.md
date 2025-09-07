@@ -4,7 +4,7 @@
 - Serveur Ubuntu/Debian avec Nginx
 - Accès root/sudo
 - Git installé
-- Nom de domaine configuré : `dev.consultantdigital-paris.fr`
+- Nom de domaine configuré : `dev.ayta.fr`
 
 ## 🔧 Installation
 
@@ -24,7 +24,7 @@ cd dev
 
 ### 3. Configurer Nginx
 ```bash
-sudo cp nginx-dev.conf /etc/nginx/conf.d/dev.consultantdigital-paris.fr.conf
+sudo cp nginx-dev.conf /etc/nginx/conf.d/dev.ayta.fr.conf
 sudo nginx -t
 sudo systemctl reload nginx
 ```
@@ -67,11 +67,11 @@ sudo systemctl reload nginx
 ```
 
 ## 🌐 Accès
-- URL : http://dev.consultantdigital-paris.fr
+- URL : http://dev.ayta.fr
 - Protection : Mot de passe requis
 - Indexation : Bloquée par robots.txt
 
 ## 🛠️ Maintenance
-- Logs Nginx : `/var/log/nginx/dev.consultantdigital-paris.fr.*.log`
+- Logs Nginx : `/var/log/nginx/dev.ayta.fr.*.log`
 - Test config : `sudo nginx -t`
 - Redémarrage : `sudo systemctl reload nginx`
