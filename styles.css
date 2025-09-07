@@ -80,11 +80,20 @@ body {
     .hero-content {
         padding: 2rem 1rem;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     
     .hero-text {
         order: 2;
         margin-top: 2rem;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .hero-visual {
@@ -92,6 +101,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
     }
     
     .hero-cake-container {
@@ -120,19 +130,19 @@ body {
     }
     
     h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
     
     .gallery h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
     
     .contact h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
     
     .about h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
     
     .gallery-filters {
@@ -960,11 +970,11 @@ body {
     
     /* Ajustement des titres pour tablettes */
     h2 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     
     .section-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     
     .nav-logo h2 {
