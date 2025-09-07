@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+
+# Site en développement - Ne pas indexer
+# dev.consultantdigital-paris.fr
