@@ -24,8 +24,7 @@ cd dev
 
 ### 3. Configurer Nginx
 ```bash
-sudo cp nginx-dev.conf /etc/nginx/sites-available/dev.consultantdigital-paris.fr
-sudo ln -s /etc/nginx/sites-available/dev.consultantdigital-paris.fr /etc/nginx/sites-enabled/
+sudo cp nginx-dev.conf /etc/nginx/conf.d/dev.consultantdigital-paris.fr.conf
 sudo nginx -t
 sudo systemctl reload nginx
 ```

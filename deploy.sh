@@ -10,8 +10,7 @@ echo "🚀 Déploiement du site L'Atelier de Fedwa..."
 # Variables
 REPO_URL="https://github.com/abderait/atelier-de-fedwa.git"
 DEPLOY_DIR="/var/www/dev"
-NGINX_CONF="/etc/nginx/sites-available/dev.consultantdigital-paris.fr"
-NGINX_ENABLED="/etc/nginx/sites-enabled/dev.consultantdigital-paris.fr"
+NGINX_CONF="/etc/nginx/conf.d/dev.consultantdigital-paris.fr.conf"
 
 # Couleurs pour les logs
 RED='\033[0;31m'
@@ -44,7 +43,6 @@ fi
 
 echo -e "${YELLOW}⚙️ Configuration Nginx...${NC}"
 sudo cp nginx-dev.conf $NGINX_CONF
-sudo ln -sf $NGINX_CONF $NGINX_ENABLED
 
 echo -e "${YELLOW}🔍 Test de la configuration Nginx...${NC}"
 sudo nginx -t
