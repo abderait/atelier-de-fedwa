@@ -512,6 +512,15 @@ body {
     }
 }
 
+/* Force hamburger display on mobile */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+}
+
 @media (max-width: 375px) {
     .cta-content h2 {
         font-size: 1.8rem;
@@ -553,7 +562,7 @@ body {
     }
     
     .hamburger {
-        display: none !important;
+        display: none;
     }
 }
 
@@ -581,7 +590,10 @@ body {
     }
     
     .hamburger {
-        display: flex;
+        display: flex !important;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 1000;
     }
 }
 
@@ -633,6 +645,8 @@ body {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    position: relative;
+    z-index: 1000;
 }
 
 .bar {
@@ -714,6 +728,12 @@ body {
     line-height: 1.2;
     font-weight: 300;
     letter-spacing: 1px;
+    /* Réserver l'espace pour éviter le CLS */
+    min-height: 1.2em;
+    /* Animation optimisée sans décalage de layout */
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideInLeftOptimized 0.8s ease-out 0.2s forwards;
 }
 
 .hero-subtitle {
@@ -723,6 +743,12 @@ body {
     font-weight: 300;
     letter-spacing: 2px;
     text-transform: uppercase;
+    /* Réserver l'espace pour éviter le CLS */
+    min-height: 1.2em;
+    /* Animation optimisée */
+    opacity: 0;
+    transform: translateX(-15px);
+    animation: slideInLeftOptimized 0.8s ease-out 0.4s forwards;
 }
 
 .hero-description {
@@ -732,12 +758,24 @@ body {
     line-height: 1.8;
     font-weight: 300;
     max-width: 500px;
+    /* Réserver l'espace pour éviter le CLS */
+    min-height: 4.32em; /* 3 lignes * 1.2rem * 1.8 line-height */
+    /* Animation optimisée */
+    opacity: 0;
+    transform: translateX(-10px);
+    animation: slideInLeftOptimized 0.8s ease-out 0.6s forwards;
 }
 
 .hero-buttons {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    /* Réserver l'espace pour éviter le CLS */
+    min-height: 60px; /* Hauteur approximative des boutons */
+    /* Animation optimisée */
+    opacity: 0;
+    transform: translateX(-10px);
+    animation: slideInLeftOptimized 0.8s ease-out 0.8s forwards;
 }
 
 .btn {
@@ -1353,6 +1391,17 @@ body {
     from {
         opacity: 0;
         transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeftOptimized {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
     }
     to {
         opacity: 1;
