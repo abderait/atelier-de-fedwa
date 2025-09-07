@@ -11,14 +11,18 @@ mkdir -p dist
 # Copier les fichiers HTML
 echo "📄 Copying HTML files..."
 cp src/pages/*.html dist/
+cp src/pages/index.html .  # Garder index.html à la racine
+cp src/pages/galerie-*.html .  # Garder les pages galerie à la racine
 
 # Copier les fichiers CSS
 echo "🎨 Copying CSS files..."
 cp src/css/*.css dist/
+cp src/css/main.css styles.css  # Garder styles.css à la racine
 
 # Copier les fichiers JS
 echo "⚡ Copying JS files..."
 cp src/js/*.js dist/
+cp src/js/main.js script.js  # Garder script.js à la racine
 
 # Copier les assets
 echo "🖼️  Copying assets..."
