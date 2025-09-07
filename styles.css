@@ -537,6 +537,13 @@ body {
     display: flex;
     list-style: none;
     gap: 2rem;
+    align-items: center;
+    position: static;
+    flex-direction: row;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    width: auto;
 }
 
 .nav-link {
@@ -569,6 +576,10 @@ body {
 
 .nav-link:hover::after {
     width: 60%;
+}
+
+.nav-item {
+    margin: 0;
 }
 
 .hamburger {
