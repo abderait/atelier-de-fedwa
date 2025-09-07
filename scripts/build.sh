@@ -10,7 +10,7 @@ mkdir -p dist
 
 # Copier les fichiers HTML
 echo "📄 Copying HTML files..."
-cp src/pages/*.html dist/
+cp src/pages/index.html dist/
 cp src/pages/index.html .  # Garder index.html à la racine
 
 # Copier les fichiers CSS
