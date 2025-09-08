@@ -715,7 +715,7 @@ body {
     align-items: center;
     max-width: 1600px;
     margin: 0 auto;
-    padding: 0 60px;
+    padding: 0 10px;
     position: relative;
     z-index: 3;
     width: 100%;
@@ -723,7 +723,7 @@ body {
 
 .hero-text {
     animation: slideInLeft 1s ease-out;
-    padding-right: 2rem;
+    padding: 0 1.2rem;
 }
 
 .hero-visual {

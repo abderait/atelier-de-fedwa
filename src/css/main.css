@@ -723,7 +723,7 @@ body {
 
 .hero-text {
     animation: slideInLeft 1s ease-out;
-    padding-right: 2rem;
+    padding: 1.2rem;
 }
 
 .hero-visual {
